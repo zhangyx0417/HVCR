@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 1,
+    "video_filename": "video_00001.mp4",
+    "scenario": "bogus",
+    "total_frames": 475,
+    "duration": 19.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 17 to 19 seconds in the clip, does KOR No. 11's (right) attempt to block IND No. 1 (left) affect whether IND scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, does IND No. 1's (left) attack attempt affect whether IND scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, does IND No. 1's (left) attack over the net affect whether IND scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, why did IND (the left team) fail to score in this rally?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because IND No. 1's attack did not go over the net.",
+        "Because IND No. 1 did not attack against KOR.",
+        "Because KOR No. 11 attempted to block IND No. 1.",
+        "Because nothing in the play caused IND to score."
+      ]
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, if we force KOR No. 11 (right) not to block IND No. 1 (left) and force IND No. 1 to attack, will IND No. 1's attack over the net cause IND to score in this rally?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, if we force KOR No. 11 (right) not to block IND No. 1 (left) and force IND No. 1 to attack, will KOR No. 11 cause IND to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, if we force IND No. 1 (left) to attack, will its attack over the net cause IND to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, if KOR No. 11 (right) had not attempted to block IND No. 1 (left) and IND No. 1 had attacked, would IND still have failed to score in this rally?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, if IND No. 1 (left) had attacked, would IND still have failed to score in this rally?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that KOR No. 11 (right) attempted to block IND No. 1 (left) sufficient for IND's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1 (left) did not attack sufficient for IND's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1's (left) attack did not go over the net sufficient for IND's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that KOR No. 11 (right) attempted to block IND No. 1 (left) necessary for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1 (left) did not attack necessary for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1's (left) attack did not go over the net necessary for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, what is the actual cause of IND's (the left team) failure to score in this rally?",
+      "answer": {
+        "HP": [
+          0,
+          3
+        ],
+        "BV": [
+          2,
+          3
+        ],
+        "DBV": [
+          2,
+          3
+        ],
+        "Boc": [
+          2,
+          3,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "KOR No. 11 attempts to block IND No. 1 and IND No. 1 does not attack against KOR.",
+        "None.",
+        "IND No. 1 does not attack against KOR.",
+        "IND No. 1's attack does not go over the net.",
+        "KOR No. 11 attempts to block IND No. 1."
+      ]
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that KOR No. 11 (right) attempted to block IND No. 1 (left) responsible for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1 (left) did not attack responsible for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 17 to 19 seconds in the clip, was the fact that IND No. 1's (left) attack did not go over the net responsible for IND's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

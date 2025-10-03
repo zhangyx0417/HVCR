@@ -1,0 +1,189 @@
+{
+  "video_info": {
+    "scene_index": 8,
+    "video_filename": "video_00008.mp4",
+    "scenario": "late",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the blue metal cylinder's collision with the red metal sphere affect the red metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the red metal cube's collision with the red metal sphere affect the red metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the blue metal cylinder's collision with the red metal sphere affect the red metal cube's collision with the red metal sphere?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the red metal sphere move?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the blue metal cylinder moved toward the red metal sphere.",
+        "Because the red metal cube moved toward the red metal sphere.",
+        "Because the red metal sphere moved spontaneously."
+      ]
+    },
+    {
+      "question": "If we force the blue metal cylinder not to move toward the red metal sphere, will the red metal cube cause the red metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the red metal cube not to move toward the red metal sphere, will the blue metal cylinder cause the red metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue metal cylinder had not moved toward the red metal sphere, would the red metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the red metal cube had not moved toward the red metal sphere, would the red metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the red metal sphere sufficient for the red metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cube moved toward the red metal sphere sufficient for the red metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the red metal sphere necessary for the red metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cube moved toward the red metal sphere necessary for the red metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the red metal sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          0,
+          2
+        ],
+        "DBV": [
+          0,
+          2
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The blue metal cylinder moves toward the red metal sphere.",
+        "The red metal cube moves toward the red metal sphere.",
+        "The blue metal cylinder collides with the red metal sphere.",
+        "None.",
+        "The red metal cube collides with the red metal sphere."
+      ]
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the red metal sphere responsible for the red metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cube moved toward the red metal sphere responsible for the red metal sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The blue metal cylinder's motion toward the red metal sphere",
+      "X2": "The red metal cube's motion toward the red metal sphere",
+      "Z1": "The blue metal cylinder's collision with the red metal sphere",
+      "Z2": "The red metal cube's collision with the red metal sphere",
+      "Y": "The red metal sphere's motion"
+    },
+    "edges": [
+      "X1 -> Z1",
+      "X2 -> Z2",
+      "Z1 -> Z2",
+      "Z1 -> Y",
+      "Z2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Z1=1, Z2=0, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Z1=0, Z2=1, Y=1",
+      "do(X2=0)": "X1=1, Z1=1, Z2=0, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "late",
+    "setting": "basic",
+    "total_questions": 15,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

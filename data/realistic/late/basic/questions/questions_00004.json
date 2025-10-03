@@ -1,0 +1,152 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "late",
+    "total_frames": 540,
+    "duration": 9.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 6 to 8 seconds in the clip, does LAL No. 1's (in yellow) play affect whether LAL grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, does the LAL player next to No. 1's (in yellow) play affect whether LAL grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, why did LAL (the yellow team) grab the rebound?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because of UTAH.",
+        "Because of the LAL player next to No. 1's play.",
+        "Because of LAL No. 1's play."
+      ]
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if LAL No. 1 (in yellow) is forced not to play, will the LAL player next to No. 1's (in yellow) play cause LAL to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if the LAL player next to No. 1 (in yellow) is forced not to play, will LAL No. 1's (in yellow) play cause LAL to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if LAL No. 1 had not played, would LAL still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if the LAL player next to No. 1 had not played, would LAL still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was LAL No. 1's play sufficient for LAL to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the LAL player next to No. 1's play sufficient for LAL to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was LAL No. 1's play necessary for LAL to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the LAL player next to No. 1's play necessary for LAL to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, what is the actual cause of LAL grabbing the rebound?",
+      "answer": {
+        "HP": [
+          1
+        ],
+        "BV": [
+          1
+        ],
+        "DBV": [
+          1
+        ],
+        "Boc": [
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "None.",
+        "LAL No. 1's play.",
+        "The LAL player next to No. 1's play."
+      ]
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was LAL No. 1's play responsible for LAL grabbing the rebound?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the LAL player next to No. 1's play responsible for LAL grabbing the rebound?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 14,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

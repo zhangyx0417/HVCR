@@ -1,0 +1,205 @@
+{
+  "video_info": {
+    "scene_index": 14,
+    "video_filename": "video_00014.mp4",
+    "scenario": "switch",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the red metal cylinder's motion toward the red rubber cylinder before its collision with the blue rubber cylinder affect the red rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the blue rubber cylinder's collision with the red metal cylinder affect the red rubber cylinder's motion?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the red metal cylinder's motion toward the red rubber cylinder after its collision with the blue rubber cylinder affect the red rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the red rubber cylinder move?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the red metal cylinder moved toward the red rubber cylinder after its collision with the blue rubber cylinder.",
+        "Because the red rubber cylinder moved spontaneously.",
+        "Because the red metal cylinder moved toward the red rubber cylinder before its collision with the blue rubber cylinder.",
+        "Because the blue rubber cylinder collided with the red metal cylinder."
+      ]
+    },
+    {
+      "question": "If we force the red metal cylinder not to move toward the red rubber cylinder after its collision with the blue rubber cylinder, will the red metal cylinder cause the red rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the blue rubber cylinder not to collide with the red metal cylinder, will the red metal cylinder cause the red rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the red metal cylinder had not moved toward the red rubber cylinder after its collision with the blue rubber cylinder, would the red rubber cylinder still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue rubber cylinder had not collided with the red metal cylinder, would the red rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder before its collision with the blue rubber cylinder sufficient for the red rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder collided with the red metal cylinder sufficient for the red rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder after its collision with the blue rubber cylinder sufficient for the red rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder before its collision with the blue rubber cylinder necessary for the red rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder collided with the red metal cylinder necessary for the red rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder after its collision with the blue rubber cylinder necessary for the red rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the red rubber cylinder moving?",
+      "answer": {
+        "HP": [
+          1,
+          3
+        ],
+        "BV": [
+          1
+        ],
+        "DBV": [
+          1
+        ],
+        "Boc": [
+          1,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "None.",
+        "The red metal cylinder moves toward the red rubber cylinder after its collision with the blue rubber cylinder.",
+        "The red metal cylinder moves toward the red rubber cylinder before its collision with the blue rubber cylinder.",
+        "The blue rubber cylinder collides with the red metal cylinder."
+      ]
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder before its collision with the blue rubber cylinder responsible for the red rubber cylinder moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder collided with the red metal cylinder responsible for the red rubber cylinder moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the red rubber cylinder after its collision with the blue rubber cylinder responsible for the red rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "Z": "The blue rubber cylinder's collision with the red metal cylinder",
+      "X1": "The red metal cylinder's motion toward the red rubber cylinder with colliding with the blue rubber cylinder",
+      "X2": "The red metal cylinder's motion toward the red rubber cylinder without colliding with the blue rubber cylinder",
+      "Y": "The red rubber cylinder's motion"
+    },
+    "edges": [
+      "Z -> X1",
+      "Z -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "Z=1, X1=1, X2=0, Y=1",
+    "counterfactual_world": {
+      "do(Z=0)": "X1=0, X2=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "switch",
+    "setting": "basic",
+    "total_questions": 18,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

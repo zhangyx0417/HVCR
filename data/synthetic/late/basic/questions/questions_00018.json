@@ -1,0 +1,189 @@
+{
+  "video_info": {
+    "scene_index": 18,
+    "video_filename": "video_00018.mp4",
+    "scenario": "late",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the gray metal cylinder's collision with the purple rubber cylinder affect the purple rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the purple metal sphere's collision with the purple rubber cylinder affect the purple rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the gray metal cylinder's collision with the purple rubber cylinder affect the purple metal sphere's collision with the purple rubber cylinder?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the purple rubber cylinder move?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the gray metal cylinder moved toward the purple rubber cylinder.",
+        "Because the purple rubber cylinder moved spontaneously.",
+        "Because the purple metal sphere moved toward the purple rubber cylinder."
+      ]
+    },
+    {
+      "question": "If we force the gray metal cylinder not to move toward the purple rubber cylinder, will the purple metal sphere cause the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the purple metal sphere not to move toward the purple rubber cylinder, will the gray metal cylinder cause the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the gray metal cylinder had not moved toward the purple rubber cylinder, would the purple rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the purple metal sphere had not moved toward the purple rubber cylinder, would the purple rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the purple rubber cylinder sufficient for the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal sphere moved toward the purple rubber cylinder sufficient for the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the purple rubber cylinder necessary for the purple rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal sphere moved toward the purple rubber cylinder necessary for the purple rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the purple rubber cylinder moving?",
+      "answer": {
+        "HP": [
+          1,
+          3
+        ],
+        "BV": [
+          1,
+          3
+        ],
+        "DBV": [
+          1,
+          3
+        ],
+        "Boc": [
+          1,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The purple metal sphere moves toward the purple rubber cylinder.",
+        "The gray metal cylinder moves toward the purple rubber cylinder.",
+        "The purple metal sphere collides with the purple rubber cylinder.",
+        "The gray metal cylinder collides with the purple rubber cylinder.",
+        "None."
+      ]
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the purple rubber cylinder responsible for the purple rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal sphere moved toward the purple rubber cylinder responsible for the purple rubber cylinder moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The gray metal cylinder's motion toward the purple rubber cylinder",
+      "X2": "The purple metal sphere's motion toward the purple rubber cylinder",
+      "Z1": "The gray metal cylinder's collision with the purple rubber cylinder",
+      "Z2": "The purple metal sphere's collision with the purple rubber cylinder",
+      "Y": "The purple rubber cylinder's motion"
+    },
+    "edges": [
+      "X1 -> Z1",
+      "X2 -> Z2",
+      "Z1 -> Z2",
+      "Z1 -> Y",
+      "Z2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Z1=1, Z2=0, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Z1=0, Z2=1, Y=1",
+      "do(X2=0)": "X1=1, Z1=1, Z2=0, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "late",
+    "setting": "basic",
+    "total_questions": 15,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

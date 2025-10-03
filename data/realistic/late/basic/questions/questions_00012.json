@@ -1,0 +1,152 @@
+{
+  "video_info": {
+    "scene_index": 12,
+    "video_filename": "video_00012.mp4",
+    "scenario": "late",
+    "total_frames": 585,
+    "duration": 9.75
+  },
+  "qa_pairs": [
+    {
+      "question": "From 7 to 10 seconds in the clip, does MAVERICKS No. 42's (in white) play affect whether MAVERICKS grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, does MAVERICKS No. 40's (in white) play affect whether MAVERICKS grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, why did MAVERICKS (the white team) grab the rebound?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because of UTAH.",
+        "Because of MAVERICKS No. 40's play.",
+        "Because of MAVERICKS No. 42's play."
+      ]
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, if MAVERICKS No. 42 (in white) is forced not to play, will MAVERICKS No. 40's (in white) play cause MAVERICKS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, if MAVERICKS No. 40 (in white) is forced not to play, will MAVERICKS No. 42's (in white) play cause MAVERICKS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, if MAVERICKS No. 42 had not played, would MAVERICKS still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, if MAVERICKS No. 40 had not played, would MAVERICKS still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 42's play sufficient for MAVERICKS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 40's play sufficient for MAVERICKS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 42's play necessary for MAVERICKS to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 40's play necessary for MAVERICKS to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, what is the actual cause of MAVERICKS grabbing the rebound?",
+      "answer": {
+        "HP": [
+          2
+        ],
+        "BV": [
+          2
+        ],
+        "DBV": [
+          2
+        ],
+        "Boc": [
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "MAVERICKS No. 40's play.",
+        "None.",
+        "MAVERICKS No. 42's play."
+      ]
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 42's play responsible for MAVERICKS grabbing the rebound?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 10 seconds in the clip, was MAVERICKS No. 40's play responsible for MAVERICKS grabbing the rebound?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 14,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

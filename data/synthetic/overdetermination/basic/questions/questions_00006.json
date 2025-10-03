@@ -1,0 +1,179 @@
+{
+  "video_info": {
+    "scene_index": 6,
+    "video_filename": "video_00006.mp4",
+    "scenario": "overdetermination",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the green metal cylinder's motion toward the blue metal sphere affect the blue metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the cyan metal cylinder's motion toward the blue metal sphere affect the blue metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the blue metal sphere move?",
+      "answer": [
+        0,
+        3
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the cyan metal cylinder moved toward the blue metal sphere.",
+        "Because the blue metal sphere moved spontaneously.",
+        "Because the green metal cylinder and the cyan metal cylinder moved toward the blue metal sphere.",
+        "Because the green metal cylinder moved toward the blue metal sphere."
+      ]
+    },
+    {
+      "question": "If we force the green metal cylinder not to move toward the blue metal sphere, will the cyan metal cylinder cause the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the cyan metal cylinder not to move toward the blue metal sphere, will the green metal cylinder cause the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green metal cylinder had not moved toward the blue metal sphere, would the blue metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the cyan metal cylinder had not moved toward the blue metal sphere, would the blue metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the blue metal sphere sufficient for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan metal cylinder moved toward the blue metal sphere sufficient for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the blue metal sphere necessary for the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan metal cylinder moved toward the blue metal sphere necessary for the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the blue metal sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          1,
+          3
+        ],
+        "BV": [
+          0,
+          3
+        ],
+        "DBV": [
+          0,
+          3
+        ],
+        "Boc": [
+          0,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The green metal cylinder moves toward the blue metal sphere.",
+        "The green metal cylinder and the cyan metal cylinder move toward the blue metal sphere.",
+        "None.",
+        "The cyan metal cylinder moves toward the blue metal sphere."
+      ]
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the blue metal sphere responsible for the blue metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan metal cylinder moved toward the blue metal sphere responsible for the blue metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The green metal cylinder's motion toward the blue metal sphere",
+      "X2": "The cyan metal cylinder's motion toward the blue metal sphere",
+      "Y": "The blue metal sphere's motion"
+    },
+    "edges": [
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1",
+      "do(X2=0)": "X1=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "overdetermination",
+    "setting": "basic",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "video_info": {
+    "scene_index": 5,
+    "video_filename": "video_00005.mp4",
+    "scenario": "early",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the brown metal cube's motion toward the green rubber cube affect the green rubber cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the red rubber cube's motion toward the green rubber cube affect the green rubber cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the green rubber cube move?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the brown metal cube moved toward the green rubber cube.",
+        "Because the green rubber cube moved spontaneously.",
+        "Because the red rubber cube moved toward the green rubber cube."
+      ]
+    },
+    {
+      "question": "If we force the brown metal cube not to move toward the green rubber cube, will the red rubber cube cause the green rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the red rubber cube not to move toward the green rubber cube, will the brown metal cube cause the green rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the brown metal cube had not moved toward the green rubber cube, would the green rubber cube still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the red rubber cube had not moved toward the green rubber cube, would the green rubber cube still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cube moved toward the green rubber cube sufficient for the green rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red rubber cube moved toward the green rubber cube sufficient for the green rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cube moved toward the green rubber cube necessary for the green rubber cube to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red rubber cube moved toward the green rubber cube necessary for the green rubber cube to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the green rubber cube moving?",
+      "answer": {
+        "HP": [
+          2
+        ],
+        "BV": [
+          0
+        ],
+        "DBV": [
+          2
+        ],
+        "Boc": [
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "None.",
+        "The red rubber cube moves toward the green rubber cube.",
+        "The brown metal cube moves toward the green rubber cube."
+      ]
+    },
+    {
+      "question": "Was the fact that the brown metal cube moved toward the green rubber cube responsible for the green rubber cube moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red rubber cube moved toward the green rubber cube responsible for the green rubber cube moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The brown metal cube's motion toward the green rubber cube",
+      "X2": "The red rubber cube's motion toward the green rubber cube",
+      "Y": "The green rubber cube's motion"
+    },
+    "edges": [
+      "X1 -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=0, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "early",
+    "setting": "basic",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

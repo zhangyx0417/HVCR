@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 0,
+    "video_filename": "video_00000.mp4",
+    "scenario": "bogus",
+    "total_frames": 300,
+    "duration": 12.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 10 to 12 seconds in the clip, does BRA No. 8's (left) attempt to block USA No. 12 (right) affect whether USA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, does USA No. 12's (right) attack attempt affect whether USA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, does USA No. 12's (right) attack over the net affect whether USA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, why did USA (the right team) fail to score in this rally?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because BRA No. 8 attempted to block USA No. 12.",
+        "Because USA No. 12 did not attack against BRA.",
+        "Because USA No. 12's attack did not go over the net",
+        "Because nothing in the play caused USA to score."
+      ]
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, if we force BRA No. 8 (left) not to block USA No. 12 (right) and force USA No. 12 to attack, will USA No. 12's attack over the net cause USA to score in this rally?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, if we force BRA No. 8 (left) not to block USA No. 12 (right) and force USA No. 12 to attack, will BRA No. 8 cause USA to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, if we force USA No. 12 (right) to attack, will its attack over the net cause USA to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, if BRA No. 8 (left) had not attempted to block USA No. 12 (right) and USA No. 12 had attacked, would USA still have failed to score in this rally?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, if USA No. 12 (right) had attacked, would USA still have failed to score in this rally?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that BRA No. 8 (left) attempted to block USA No. 12 (right) sufficient for USA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12 (right) did not attack sufficient for USA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12's (right) attack did not go over the net sufficient for USA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that BRA No. 8 (left) attempted to block USA No. 12 (right) necessary for USA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12 (right) did not attack necessary for USA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12's (right) attack did not go over the net necessary for USA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, what is the actual cause of USA's (the right team) failure to score in this rally?",
+      "answer": {
+        "HP": [
+          3,
+          4
+        ],
+        "BV": [
+          0,
+          4
+        ],
+        "DBV": [
+          0,
+          4
+        ],
+        "Boc": [
+          0,
+          1,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "USA No. 12 does not attack against BRA.",
+        "BRA No. 8 attempts to block USA No. 12.",
+        "None.",
+        "BRA No. 8 attempts to block USA No. 12 and USA No. 12 does not attack against BRA.",
+        "USA No. 12's attack does not go over the net."
+      ]
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that BRA No. 8 (left) attempted to block USA No. 12 (right) responsible for USA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12 (right) did not attack responsible for USA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 10 to 12 seconds in the clip, was the fact that USA No. 12's (right) attack did not go over the net responsible for USA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

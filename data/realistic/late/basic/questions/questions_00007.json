@@ -1,0 +1,152 @@
+{
+  "video_info": {
+    "scene_index": 7,
+    "video_filename": "video_00007.mp4",
+    "scenario": "late",
+    "total_frames": 537,
+    "duration": 8.95
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does JAZZ No. 11's (in blue) play affect whether JAZZ grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does JAZZ No. 15's (in blue) play affect whether JAZZ grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did JAZZ (the blue team) grab the rebound?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because of UTAH.",
+        "Because of JAZZ No. 15's play.",
+        "Because of JAZZ No. 11's play."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if JAZZ No. 11 (in blue) is forced not to play, will JAZZ No. 15's (in blue) play cause JAZZ to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if JAZZ No. 15 (in blue) is forced not to play, will JAZZ No. 11's (in blue) play cause JAZZ to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if JAZZ No. 11 had not played, would JAZZ still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if JAZZ No. 15 had not played, would JAZZ still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 11's play sufficient for JAZZ to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 15's play sufficient for JAZZ to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 11's play necessary for JAZZ to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 15's play necessary for JAZZ to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of JAZZ grabbing the rebound?",
+      "answer": {
+        "HP": [
+          2
+        ],
+        "BV": [
+          2
+        ],
+        "DBV": [
+          2
+        ],
+        "Boc": [
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "JAZZ No. 15's play.",
+        "None.",
+        "JAZZ No. 11's play."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 11's play responsible for JAZZ grabbing the rebound?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was JAZZ No. 15's play responsible for JAZZ grabbing the rebound?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 14,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

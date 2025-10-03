@@ -1,0 +1,177 @@
+{
+  "video_info": {
+    "scene_index": 2,
+    "video_filename": "video_00002.mp4",
+    "scenario": "early",
+    "setting": "add_two_moving",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the blue rubber cylinder's motion toward the brown rubber cube affect the brown rubber cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the gray metal cylinder's motion toward the brown rubber cube affect the brown rubber cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the brown rubber cube move?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the gray metal cylinder moved toward the brown rubber cube.",
+        "Because the red rubber cube was present.",
+        "Because the blue rubber cylinder moved toward the brown rubber cube.",
+        "Because the brown rubber cube moved spontaneously.",
+        "Because the gray metal sphere was present."
+      ]
+    },
+    {
+      "question": "If we force the blue rubber cylinder not to move toward the brown rubber cube, will the gray metal cylinder cause the brown rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the gray metal cylinder not to move toward the brown rubber cube, will the blue rubber cylinder cause the brown rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue rubber cylinder had not moved toward the brown rubber cube, would the brown rubber cube still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the gray metal cylinder had not moved toward the brown rubber cube, would the brown rubber cube still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder moved toward the brown rubber cube sufficient for the brown rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the brown rubber cube sufficient for the brown rubber cube to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder moved toward the brown rubber cube necessary for the brown rubber cube to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the brown rubber cube necessary for the brown rubber cube to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the brown rubber cube moving?",
+      "answer": {
+        "HP": [
+          1
+        ],
+        "BV": [
+          2
+        ],
+        "DBV": [
+          1
+        ],
+        "Boc": [
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The gray metal sphere is present.",
+        "The blue rubber cylinder moves toward the brown rubber cube.",
+        "None.",
+        "The gray metal cylinder moves toward the brown rubber cube.",
+        "The red rubber cube is present."
+      ]
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder moved toward the brown rubber cube responsible for the brown rubber cube moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder moved toward the brown rubber cube responsible for the brown rubber cube moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The blue rubber cylinder's motion toward the brown rubber cube",
+      "X2": "The gray metal cylinder's motion toward the brown rubber cube",
+      "Y": "The brown rubber cube's motion",
+      "M1": "The red rubber cube's presence",
+      "M2": "The gray metal sphere's presence"
+    },
+    "edges": [
+      "X1 -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=0, Y=1, M1=1, M2=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1, M1=1, M2=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "early",
+    "setting": "add_two_moving",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

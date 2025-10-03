@@ -1,0 +1,244 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "double",
+    "setting": "add_one_static",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the green metal cube's collision with the brown metal cube affect the brown metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the gray metal cube's collision with the green metal cube affect the brown metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the green metal sphere's collision with the gray metal cube affect the brown metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the brown metal cube move?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the green metal cube collided with the brown metal cube.",
+        "Because the gray metal cube did not collide with the green metal cube.",
+        "Because the green metal sphere collided with the gray metal cube.",
+        "Because the brown metal cube moved spontaneously.",
+        "Because the blue rubber cylinder was present."
+      ]
+    },
+    {
+      "question": "If we force the gray metal cube to collide with the green metal cube, will the green metal cube cause the brown metal cube to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the green metal sphere not to collide with the gray metal cube, will the green metal cube cause the brown metal cube to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the green metal sphere not to collide with the gray metal cube, will the gray metal cube cause the brown metal cube to stay stationary?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green metal cube had not collided with the brown metal cube, would the brown metal cube still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the gray metal cube had collided with the green metal cube, would the brown metal cube still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green metal sphere had not collided with the gray metal cube, would the brown metal cube still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cube collided with the brown metal cube sufficient for the brown metal cube to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cube did not collide with the green metal cube sufficient for the brown metal cube to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal sphere collided with the gray metal cube sufficient for the brown metal cube to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cube collided with the brown metal cube necessary for the brown metal cube to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cube did not collide with the green metal cube necessary for the brown metal cube to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal sphere collided with the gray metal cube necessary for the brown metal cube to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the brown metal cube moving?",
+      "answer": {
+        "HP": [
+          0,
+          2,
+          5,
+          6,
+          7
+        ],
+        "BV": [
+          0,
+          2,
+          5,
+          6,
+          7
+        ],
+        "DBV": [
+          0,
+          7
+        ],
+        "Boc": [
+          0,
+          2,
+          5,
+          6,
+          7
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The green metal cube collides with the brown metal cube.",
+        "The gray metal cube moves toward the green metal cube.",
+        "The gray metal cube does not collide with the green metal cube.",
+        "The blue rubber cylinder is present.",
+        "None.",
+        "The green metal sphere moves toward the gray metal cube.",
+        "The green metal sphere collides with the gray metal cube.",
+        "The green metal cube moves toward the brown metal cube."
+      ]
+    },
+    {
+      "question": "Was the fact that the green metal cube collided with the brown metal cube responsible for the brown metal cube moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cube did not collide with the green metal cube responsible for the brown metal cube moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal sphere collided with the gray metal cube responsible for the brown metal cube moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The green metal cube's collision with the brown metal cube",
+      "X2": "The gray metal cube's collision with the green metal cube",
+      "X3": "The green metal sphere's collision with the gray metal cube",
+      "Z1": "The green metal cube's motion toward the brown metal cube",
+      "Z2": "The gray metal cube's motion toward the green metal cube",
+      "Z3": "The green metal sphere's motion toward the gray metal cube",
+      "Y": "The brown metal cube's motion",
+      "S": "The blue rubber cylinder's presence"
+    },
+    "edges": [
+      "Z1 -> X1",
+      "Z2 -> X2",
+      "Z2 -> X3",
+      "Z3 -> X3",
+      "X1 -> Y",
+      "X2 -> X1",
+      "X3 -> X2"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "Z1=1, Z2=1, Z3=1, X1=1, X2=0, X3=1, Y=1, S=1",
+    "counterfactual_world": {
+      "do(X1=0)": "Z1=1, Z2=?, Z3=?, X2=?, X3=?, Y=0, S=1",
+      "do(X2=1)": "Z1=1, Z2=1, Z3=?, X1=0, X3=?, Y=0, S=1",
+      "do(X3=0)": "Z1=1, Z2=1, Z3=1, X1=0, X2=1, Y=0, S=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "double",
+    "setting": "add_one_static",
+    "total_questions": 20,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

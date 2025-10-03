@@ -1,0 +1,218 @@
+{
+  "video_info": {
+    "scene_index": 17,
+    "video_filename": "video_00017.mp4",
+    "scenario": "bogus",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the yellow rubber cylinder's collision with the gray metal cylinder affect the gray metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the brown metal cylinder's collision with the gray metal cylinder affect the gray metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the gray metal cylinder's motion toward the gray metal cube affect the gray metal cube's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the gray metal cube stay stationary?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the gray metal cube moved spontaneously.",
+        "Because the gray metal cylinder did not move toward the gray metal cube.",
+        "Because the brown metal cylinder did not collide with the gray metal cylinder.",
+        "Because the yellow rubber cylinder collided with the gray metal cylinder."
+      ]
+    },
+    {
+      "question": "If we force the yellow rubber cylinder not to collide with the gray metal cylinder and force the brown metal cylinder to collide with the gray metal cylinder, will the gray metal cylinder cause the gray metal cube to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the yellow rubber cylinder not to collide with the gray metal cylinder and force the brown metal cylinder to collide with the gray metal cylinder, will the yellow rubber cylinder cause the gray metal cube to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the brown metal cylinder to collide with the gray metal cylinder, will the gray metal cylinder cause the gray metal cube to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the yellow rubber cylinder had not collided with the gray metal cylinder and the brown metal cylinder had collided with the gray metal cylinder, would the gray metal cube still have stayed stationary?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the brown metal cylinder had collided with the gray metal cylinder, would the gray metal cube still have stayed stationary?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow rubber cylinder collided with the gray metal cylinder sufficient for the gray metal cube to stay stationary?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder did not collide with the gray metal cylinder sufficient for the gray metal cube to stay stationary?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder did not move toward the gray metal cube sufficient for the gray metal cube to stay stationary?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow rubber cylinder collided with the gray metal cylinder necessary for the gray metal cube to stay stationary?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder did not collide with the gray metal cylinder necessary for the gray metal cube to stay stationary?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder did not move toward the gray metal cube necessary for the gray metal cube to stay stationary?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the gray metal cube staying stationary?",
+      "answer": {
+        "HP": [
+          1,
+          2
+        ],
+        "BV": [
+          2,
+          3
+        ],
+        "DBV": [
+          2,
+          3
+        ],
+        "Boc": [
+          2,
+          3,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "None.",
+        "The yellow rubber cylinder collides with the gray metal cylinder and the brown metal cylinder does not collide with the gray metal cylinder.",
+        "The gray metal cylinder does not move toward the gray metal cube.",
+        "The brown metal cylinder does not collide with the gray metal cylinder.",
+        "The yellow rubber cylinder collides with the gray metal cylinder."
+      ]
+    },
+    {
+      "question": "Was the fact that the yellow rubber cylinder collided with the gray metal cylinder responsible for the gray metal cube staying stationary?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder did not collide with the gray metal cylinder responsible for the gray metal cube staying stationary?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the gray metal cylinder did not move toward the gray metal cube responsible for the gray metal cube staying stationary?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The yellow rubber cylinder's collision with the gray metal cylinder",
+      "X2": "The brown metal cylinder's collision with the gray metal cylinder",
+      "Z": "The gray metal cylinder's motion toward the gray metal cube",
+      "W": "The gray metal cylinder reaches the gray metal cube",
+      "Y": "The gray metal cube's motion"
+    },
+    "edges": [
+      "X1 -> Z",
+      "X2 -> Z",
+      "Z -> Y",
+      "W -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=0, Z=0, W=0, Y=0",
+    "counterfactual_world": {
+      "do(X1=0, X2=1)": "Z=1, W=?, Y=W",
+      "do(X1=1, X2=1)": "Z=0, W=0, Y=0"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "bogus",
+    "setting": "basic",
+    "total_questions": 19,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

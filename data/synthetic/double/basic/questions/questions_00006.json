@@ -1,0 +1,241 @@
+{
+  "video_info": {
+    "scene_index": 6,
+    "video_filename": "video_00006.mp4",
+    "scenario": "double",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the brown metal cylinder's collision with the blue metal sphere affect the blue metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the blue rubber cylinder's collision with the brown metal cylinder affect the blue metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the cyan rubber sphere's collision with the blue rubber cylinder affect the blue metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the blue metal sphere move?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the blue rubber cylinder did not collide with the brown metal cylinder.",
+        "Because the brown metal cylinder collided with the blue metal sphere.",
+        "Because the blue metal sphere moved spontaneously.",
+        "Because the cyan rubber sphere collided with the blue rubber cylinder."
+      ]
+    },
+    {
+      "question": "If we force the blue rubber cylinder to collide with the brown metal cylinder, will the brown metal cylinder cause the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the cyan rubber sphere not to collide with the blue rubber cylinder, will the brown metal cylinder cause the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the cyan rubber sphere not to collide with the blue rubber cylinder, will the blue rubber cylinder cause the blue metal sphere to stay stationary?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the brown metal cylinder had not collided with the blue metal sphere, would the blue metal sphere still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue rubber cylinder had collided with the brown metal cylinder, would the blue metal sphere still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the cyan rubber sphere had not collided with the blue rubber cylinder, would the blue metal sphere still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder collided with the blue metal sphere sufficient for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder did not collide with the brown metal cylinder sufficient for the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan rubber sphere collided with the blue rubber cylinder sufficient for the blue metal sphere to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder collided with the blue metal sphere necessary for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder did not collide with the brown metal cylinder necessary for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan rubber sphere collided with the blue rubber cylinder necessary for the blue metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the blue metal sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ],
+        "BV": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ],
+        "DBV": [
+          0,
+          1
+        ],
+        "Boc": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The brown metal cylinder moves toward the blue metal sphere.",
+        "The brown metal cylinder collides with the blue metal sphere.",
+        "The cyan rubber sphere collides with the blue rubber cylinder.",
+        "None.",
+        "The blue rubber cylinder moves toward the brown metal cylinder.",
+        "The blue rubber cylinder does not collide with the brown metal cylinder.",
+        "The cyan rubber sphere moves toward the blue rubber cylinder."
+      ]
+    },
+    {
+      "question": "Was the fact that the brown metal cylinder collided with the blue metal sphere responsible for the blue metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue rubber cylinder did not collide with the brown metal cylinder responsible for the blue metal sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan rubber sphere collided with the blue rubber cylinder responsible for the blue metal sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The brown metal cylinder's collision with the blue metal sphere",
+      "X2": "The blue rubber cylinder's collision with the brown metal cylinder",
+      "X3": "The cyan rubber sphere's collision with the blue rubber cylinder",
+      "Z1": "The brown metal cylinder's motion toward the blue metal sphere",
+      "Z2": "The blue rubber cylinder's motion toward the brown metal cylinder",
+      "Z3": "The cyan rubber sphere's motion toward the blue rubber cylinder",
+      "Y": "The blue metal sphere's motion"
+    },
+    "edges": [
+      "Z1 -> X1",
+      "Z2 -> X2",
+      "Z2 -> X3",
+      "Z3 -> X3",
+      "X1 -> Y",
+      "X2 -> X1",
+      "X3 -> X2"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "Z1=1, Z2=1, Z3=1, X1=1, X2=0, X3=1, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "Z1=1, Z2=?, Z3=?, X2=?, X3=?, Y=0",
+      "do(X2=1)": "Z1=1, Z2=1, Z3=?, X1=0, X3=?, Y=0",
+      "do(X3=0)": "Z1=1, Z2=1, Z3=1, X1=0, X2=1, Y=0"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "double",
+    "setting": "basic",
+    "total_questions": 20,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "video_info": {
+    "scene_index": 16,
+    "video_filename": "video_00016.mp4",
+    "scenario": "late",
+    "total_frames": 541,
+    "duration": 9.016666666666667
+  },
+  "qa_pairs": [
+    {
+      "question": "From 5 to 7 seconds in the clip, does LAKERS No. 11's (in yellow) play affect whether CLIPPERS grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, does LAKERS No. 7's (in yellow) play affect whether CLIPPERS grabs the rebound?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, why did CLIPPERS (the yellow team) grab the rebound?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because of LAKERS No. 11's play.",
+        "Because of LAKERS No. 7's play.",
+        "Because of UTAH."
+      ]
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if LAKERS No. 11 (in yellow) is forced not to play, will LAKERS No. 7's (in yellow) play cause CLIPPERS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if LAKERS No. 7 (in yellow) is forced not to play, will LAKERS No. 11's (in yellow) play cause CLIPPERS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if LAKERS No. 11 had not played, would CLIPPERS still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if LAKERS No. 7 had not played, would CLIPPERS still have grabbed the rebound?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 11's play sufficient for CLIPPERS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 7's play sufficient for CLIPPERS to grab the rebound?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 11's play necessary for CLIPPERS to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 7's play necessary for CLIPPERS to grab the rebound?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, what is the actual cause of CLIPPERS grabbing the rebound?",
+      "answer": {
+        "HP": [
+          2
+        ],
+        "BV": [
+          2
+        ],
+        "DBV": [
+          2
+        ],
+        "Boc": [
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "LAKERS No. 7's play.",
+        "None.",
+        "LAKERS No. 11's play."
+      ]
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 11's play responsible for CLIPPERS grabbing the rebound?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was LAKERS No. 7's play responsible for CLIPPERS grabbing the rebound?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 14,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

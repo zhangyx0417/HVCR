@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 13,
+    "video_filename": "video_00013.mp4",
+    "scenario": "switch",
+    "total_frames": 250,
+    "duration": 8.60390625
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does the gray car to my left turning right affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the gray car to my left staying straight affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the gray car to my left's choice of turning right or staying straight affect whether it becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did the gray car to my left become damaged?",
+      "answer": [
+        3
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it became damaged spontaneously.",
+        "Because of its choice of turning right or staying straight.",
+        "Because it did not stay straight.",
+        "Because it turned right."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the gray car to my left is forced not to turn right, will the white car in front of me cause it to become damaged?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the gray car to my left is forced to stay straight, will the red car in front of it cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the gray car to my left had not turned right, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the gray car to my left had stayed straight, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the gray car to my left turned right sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the gray car to my left's choice of turning right or staying straight sufficient for it to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the gray car to my left turned right necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the gray car to my left's choice of turning right or staying straight necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of the gray car to my left becoming damaged?",
+      "answer": {
+        "HP": [
+          0,
+          1
+        ],
+        "BV": [
+          0
+        ],
+        "DBV": [
+          0
+        ],
+        "Boc": [
+          0,
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "It turns right.",
+        "The choice of turning right or staying straight.",
+        "It stays straight.",
+        "None."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the gray car to my left turned right responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the gray car to my left's choice of turning right or staying straight responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 5,
+    "video_filename": "video_00005.mp4",
+    "scenario": "switch",
+    "total_frames": 311,
+    "duration": 10.654231770833333
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does the motorbike turning right affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the motorbike staying straight affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the motorbike's choice of turning right or staying straight affect whether it becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did the motorbike become damaged?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it turned right.",
+        "Because it became damaged spontaneously.",
+        "Because of its choice of turning right or staying straight.",
+        "Because it did not stay straight."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the motorbike is forced not to turn right, will the gray car in front of me cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the motorbike is forced to stay straight, will the gray car in front of me cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the motorbike had not turned right, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the motorbike had stayed straight, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the motorbike turned right sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the motorbike's choice of turning right or staying straight sufficient for it to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the motorbike turned right necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the motorbike's choice of turning right or staying straight necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of the motorbike becoming damaged?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          0
+        ],
+        "DBV": [
+          0
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "It turns right.",
+        "None.",
+        "The choice of turning right or staying straight.",
+        "It stays straight."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the motorbike turned right responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the motorbike's choice of turning right or staying straight responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

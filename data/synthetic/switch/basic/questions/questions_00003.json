@@ -1,0 +1,205 @@
+{
+  "video_info": {
+    "scene_index": 3,
+    "video_filename": "video_00003.mp4",
+    "scenario": "switch",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the red metal cylinder's motion toward the green metal cylinder before its collision with the green rubber sphere affect the green metal cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the green rubber sphere's collision with the red metal cylinder affect the green metal cylinder's motion?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the red metal cylinder's motion toward the green metal cylinder after its collision with the green rubber sphere affect the green metal cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the green metal cylinder move?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the green metal cylinder moved spontaneously.",
+        "Because the green rubber sphere collided with the red metal cylinder.",
+        "Because the red metal cylinder moved toward the green metal cylinder after its collision with the green rubber sphere.",
+        "Because the red metal cylinder moved toward the green metal cylinder before its collision with the green rubber sphere."
+      ]
+    },
+    {
+      "question": "If we force the red metal cylinder not to move toward the green metal cylinder after its collision with the green rubber sphere, will the red metal cylinder cause the green metal cylinder to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the green rubber sphere not to collide with the red metal cylinder, will the red metal cylinder cause the green metal cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the red metal cylinder had not moved toward the green metal cylinder after its collision with the green rubber sphere, would the green metal cylinder still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green rubber sphere had not collided with the red metal cylinder, would the green metal cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder before its collision with the green rubber sphere sufficient for the green metal cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green rubber sphere collided with the red metal cylinder sufficient for the green metal cylinder to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder after its collision with the green rubber sphere sufficient for the green metal cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder before its collision with the green rubber sphere necessary for the green metal cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green rubber sphere collided with the red metal cylinder necessary for the green metal cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder after its collision with the green rubber sphere necessary for the green metal cylinder to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the green metal cylinder moving?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          0
+        ],
+        "DBV": [
+          0
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The red metal cylinder moves toward the green metal cylinder after its collision with the green rubber sphere.",
+        "The red metal cylinder moves toward the green metal cylinder before its collision with the green rubber sphere.",
+        "The green rubber sphere collides with the red metal cylinder.",
+        "None."
+      ]
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder before its collision with the green rubber sphere responsible for the green metal cylinder moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green rubber sphere collided with the red metal cylinder responsible for the green metal cylinder moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red metal cylinder moved toward the green metal cylinder after its collision with the green rubber sphere responsible for the green metal cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "Z": "The green rubber sphere's collision with the red metal cylinder",
+      "X1": "The red metal cylinder's motion toward the green metal cylinder with colliding with the green rubber sphere",
+      "X2": "The red metal cylinder's motion toward the green metal cylinder without colliding with the green rubber sphere",
+      "Y": "The green metal cylinder's motion"
+    },
+    "edges": [
+      "Z -> X1",
+      "Z -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "Z=1, X1=1, X2=0, Y=1",
+    "counterfactual_world": {
+      "do(Z=0)": "X1=0, X2=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "switch",
+    "setting": "basic",
+    "total_questions": 18,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "overdetermination",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the red rubber sphere's motion toward the purple metal sphere affect the purple metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the purple rubber cylinder's motion toward the purple metal sphere affect the purple metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the purple metal sphere move?",
+      "answer": [
+        0,
+        3
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the red rubber sphere moved toward the purple metal sphere.",
+        "Because the purple metal sphere moved spontaneously.",
+        "Because the red rubber sphere and the purple rubber cylinder moved toward the purple metal sphere.",
+        "Because the purple rubber cylinder moved toward the purple metal sphere."
+      ]
+    },
+    {
+      "question": "If we force the red rubber sphere not to move toward the purple metal sphere, will the purple rubber cylinder cause the purple metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the purple rubber cylinder not to move toward the purple metal sphere, will the red rubber sphere cause the purple metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the red rubber sphere had not moved toward the purple metal sphere, would the purple metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the purple rubber cylinder had not moved toward the purple metal sphere, would the purple metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red rubber sphere moved toward the purple metal sphere sufficient for the purple metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber cylinder moved toward the purple metal sphere sufficient for the purple metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the red rubber sphere moved toward the purple metal sphere necessary for the purple metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber cylinder moved toward the purple metal sphere necessary for the purple metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the purple metal sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          1,
+          2
+        ],
+        "BV": [
+          1,
+          2
+        ],
+        "DBV": [
+          1,
+          2
+        ],
+        "Boc": [
+          1,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The red rubber sphere and the purple rubber cylinder move toward the purple metal sphere.",
+        "The red rubber sphere moves toward the purple metal sphere.",
+        "The purple rubber cylinder moves toward the purple metal sphere.",
+        "None."
+      ]
+    },
+    {
+      "question": "Was the fact that the red rubber sphere moved toward the purple metal sphere responsible for the purple metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber cylinder moved toward the purple metal sphere responsible for the purple metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The red rubber sphere's motion toward the purple metal sphere",
+      "X2": "The purple rubber cylinder's motion toward the purple metal sphere",
+      "Y": "The purple metal sphere's motion"
+    },
+    "edges": [
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Y=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1",
+      "do(X2=0)": "X1=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "overdetermination",
+    "setting": "basic",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

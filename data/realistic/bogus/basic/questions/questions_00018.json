@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 18,
+    "video_filename": "video_000018.mp4",
+    "scenario": "bogus",
+    "total_frames": 541,
+    "duration": 9.016666666666667
+  },
+  "qa_pairs": [
+    {
+      "question": "From 2 to 4 seconds in the clip, does LAKERS No. 14's (in yellow) attempt to defend CLIPPERS No. 11 (in blue) affect whether CLIPPERS scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, does CLIPPERS No. 11's (in blue) shot attempt affect whether CLIPPERS scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, does CLIPPERS No. 11's (in blue) shot on target affect whether CLIPPERS scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, why did CLIPPERS (the blue team) fail to score on this possession?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because CLIPPERS No. 11's shot was not on target.",
+        "Because CLIPPERS No. 11 did not shoot against LAKERS.",
+        "Because nothing in the play caused CLIPPERS to score.",
+        "Because LAKERS No. 14 attempted to defend CLIPPERS No. 11."
+      ]
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, if we force LAKERS No. 14 (in yellow) not to defend CLIPPERS No. 11 (in blue) and force CLIPPERS No. 11 to shoot, will CLIPPERS No. 11's shot on target cause CLIPPERS to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, if we force LAKERS No. 14 (in yellow) not to defend CLIPPERS No. 11 (in blue) and force CLIPPERS No. 11 to shoot, will LAKERS cause CLIPPERS to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, if we force CLIPPERS No. 11 (in blue) to shoot, will its shot on target cause CLIPPERS to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, if LAKERS No. 14 (in yellow) had not attempted to defend CLIPPERS No. 11 (in blue) and CLIPPERS No. 11 had shot, would CLIPPERS still have failed to score on this possession?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, if CLIPPERS No. 11 (in blue) had shot, would CLIPPERS still have failed to score on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that LAKERS No. 14 (in yellow) attempted to defend CLIPPERS No. 11 (in blue) sufficient for CLIPPERS's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11 (in blue) did not shoot sufficient for CLIPPERS's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11's (in blue) shot was not on target sufficient for CLIPPERS's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that LAKERS No. 14 (in yellow) attempted to defend CLIPPERS No. 11 (in blue) necessary for CLIPPERS's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11 (in blue) did not shoot necessary for CLIPPERS's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11's (in blue) shot was not on target necessary for CLIPPERS's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, what is the actual cause of CLIPPERS's (the blue team) failure to score on this possession?",
+      "answer": {
+        "HP": [
+          1,
+          2
+        ],
+        "BV": [
+          2,
+          4
+        ],
+        "DBV": [
+          2,
+          4
+        ],
+        "Boc": [
+          2,
+          3,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "None.",
+        "LAKERS No. 14 attempts to defend CLIPPERS No. 11 and CLIPPERS No. 11 does not shoot against LAKERS",
+        "CLIPPERS No. 11's shot is not on target.",
+        "LAKERS No. 14 attempts to defend CLIPPERS No. 11.",
+        "CLIPPERS No. 11 does not shoot against LAKERS."
+      ]
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that LAKERS No. 14 (in yellow) attempted to defend CLIPPERS No. 11 (in blue) responsible for CLIPPERS's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11 (in blue) did not shoot responsible for CLIPPERS's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 2 to 4 seconds in the clip, was the fact that CLIPPERS No. 11's (in blue) shot was not on target responsible for CLIPPERS's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

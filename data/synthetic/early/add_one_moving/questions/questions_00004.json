@@ -1,0 +1,174 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "early",
+    "setting": "add_one_moving",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the cyan metal cube's motion toward the gray rubber sphere affect the gray rubber sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the yellow metal cylinder's motion toward the gray rubber sphere affect the gray rubber sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the gray rubber sphere move?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the yellow metal cylinder moved toward the gray rubber sphere.",
+        "Because the blue rubber cylinder was present.",
+        "Because the cyan metal cube moved toward the gray rubber sphere.",
+        "Because the gray rubber sphere moved spontaneously."
+      ]
+    },
+    {
+      "question": "If we force the cyan metal cube not to move toward the gray rubber sphere, will the yellow metal cylinder cause the gray rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the yellow metal cylinder not to move toward the gray rubber sphere, will the cyan metal cube cause the gray rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the cyan metal cube had not moved toward the gray rubber sphere, would the gray rubber sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the yellow metal cylinder had not moved toward the gray rubber sphere, would the gray rubber sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan metal cube moved toward the gray rubber sphere sufficient for the gray rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal cylinder moved toward the gray rubber sphere sufficient for the gray rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the cyan metal cube moved toward the gray rubber sphere necessary for the gray rubber sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal cylinder moved toward the gray rubber sphere necessary for the gray rubber sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the gray rubber sphere moving?",
+      "answer": {
+        "HP": [
+          0
+        ],
+        "BV": [
+          1
+        ],
+        "DBV": [
+          0
+        ],
+        "Boc": [
+          0
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The cyan metal cube moves toward the gray rubber sphere.",
+        "None.",
+        "The yellow metal cylinder moves toward the gray rubber sphere.",
+        "The blue rubber cylinder is present."
+      ]
+    },
+    {
+      "question": "Was the fact that the cyan metal cube moved toward the gray rubber sphere responsible for the gray rubber sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal cylinder moved toward the gray rubber sphere responsible for the gray rubber sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The cyan metal cube's motion toward the gray rubber sphere",
+      "X2": "The yellow metal cylinder's motion toward the gray rubber sphere",
+      "Y": "The gray rubber sphere's motion",
+      "M": "The blue rubber cylinder's presence"
+    },
+    "edges": [
+      "X1 -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=0, Y=1, M=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1, M=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "early",
+    "setting": "add_one_moving",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

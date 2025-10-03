@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 16,
+    "video_filename": "video_00016.mp4",
+    "scenario": "switch",
+    "total_frames": 229,
+    "duration": 9.16
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does the small truck turning left affect whether it collides with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the small truck staying straight affect whether it collides with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the small truck's choice of turning left or staying straight affect whether it collides with the wheelchair?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did the small truck collide with the wheelchair?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it did not stay straight.",
+        "Because it collided with the wheelchair spontaneously.",
+        "Because it turned left.",
+        "Because of its choice of turning left or staying straight."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the small truck is forced not to turn left, will the large truck cause it to collide with the wheelchair?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the small truck is forced to stay straight, will it cause itself to collide with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the small truck had not turned left, would it still have collide with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the small truck had stayed straight, would it still have collide with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the small truck turned left sufficient for it to collide with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the small truck's choice of turning left or staying straight sufficient for it to collide with the wheelchair?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the small truck turned left necessary for it to collide with the wheelchair?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the small truck's choice of turning left or staying straight necessary for it to collide with the wheelchair?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of the small truck colliding with the wheelchair?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          0
+        ],
+        "DBV": [
+          0
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "It turns left.",
+        "None.",
+        "The choice of turning left or staying straight.",
+        "It stays straight."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the small truck turned left responsible for it colliding with the wheelchair?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the small truck's choice of turning left or staying straight responsible for it colliding with the wheelchair?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

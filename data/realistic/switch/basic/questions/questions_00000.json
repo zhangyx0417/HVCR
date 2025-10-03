@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 0,
+    "video_filename": "video_00000.mp4",
+    "scenario": "switch",
+    "total_frames": 637,
+    "duration": 25.5
+  },
+  "qa_pairs": [
+    {
+      "question": "From 12 to 15 seconds in the clip, does the car to my rear right being in the right lane affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, does the car to my rear right being in the left lane affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, does the car to my rear right's choice of left or right lanes affect whether it becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, why did the car to my rear right become damaged?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it was not in the left lane.",
+        "Because it was in the right lane.",
+        "Because it became damaged spontaneously.",
+        "Because of its choice of left or right lanes."
+      ]
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, if the car to my rear right is forced out of the right lane, will the car in front of it cause it to become damaged?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, if the car to my rear right is forced to be in the left lane, will my car cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, if the car to my rear right had not been in the right lane, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, if the car to my rear right had been in the left lane, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the fact that the car to my rear right was in the right lane sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the car to my rear right's choice of left or right lanes sufficient for it to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the fact that the car to my rear right was in the right lane necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the car to my rear right's choice of left or right lanes necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, what is the actual cause of the car to my rear right becoming damaged?",
+      "answer": {
+        "HP": [
+          2,
+          3
+        ],
+        "BV": [
+          3
+        ],
+        "DBV": [
+          3
+        ],
+        "Boc": [
+          2,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "It is in the left lane.",
+        "None.",
+        "The choice of left or right lanes.",
+        "It is in the right lane."
+      ]
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the fact that the car to my rear right was in the right lane responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 12 to 15 seconds in the clip, was the car to my rear right's choice of left or right lanes responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

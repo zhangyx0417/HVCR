@@ -1,0 +1,185 @@
+{
+  "video_info": {
+    "scene_index": 3,
+    "video_filename": "video_00003.mp4",
+    "scenario": "overdetermination",
+    "setting": "add_two_static",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the blue metal cylinder's motion toward the gray metal sphere affect the gray metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the purple metal cylinder's motion toward the gray metal sphere affect the gray metal sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the gray metal sphere move?",
+      "answer": [
+        0,
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the purple metal cylinder moved toward the gray metal sphere.",
+        "Because the blue metal cylinder moved toward the gray metal sphere.",
+        "Because the cyan metal sphere was present.",
+        "Because the gray metal cube was present.",
+        "Because the gray metal sphere moved spontaneously.",
+        "Because the blue metal cylinder and the purple metal cylinder moved toward the gray metal sphere."
+      ]
+    },
+    {
+      "question": "If we force the blue metal cylinder not to move toward the gray metal sphere, will the purple metal cylinder cause the gray metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the purple metal cylinder not to move toward the gray metal sphere, will the blue metal cylinder cause the gray metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue metal cylinder had not moved toward the gray metal sphere, would the gray metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the purple metal cylinder had not moved toward the gray metal sphere, would the gray metal sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the gray metal sphere sufficient for the gray metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal cylinder moved toward the gray metal sphere sufficient for the gray metal sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the gray metal sphere necessary for the gray metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal cylinder moved toward the gray metal sphere necessary for the gray metal sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the gray metal sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          1,
+          3
+        ],
+        "BV": [
+          1,
+          3
+        ],
+        "DBV": [
+          1,
+          3
+        ],
+        "Boc": [
+          1,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The blue metal cylinder and the purple metal cylinder move toward the gray metal sphere.",
+        "The blue metal cylinder moves toward the gray metal sphere.",
+        "The cyan metal sphere is present.",
+        "The purple metal cylinder moves toward the gray metal sphere.",
+        "None.",
+        "The gray metal cube is present."
+      ]
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the gray metal sphere responsible for the gray metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple metal cylinder moved toward the gray metal sphere responsible for the gray metal sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The blue metal cylinder's motion toward the gray metal sphere",
+      "X2": "The purple metal cylinder's motion toward the gray metal sphere",
+      "Y": "The gray metal sphere's motion",
+      "S1": "The gray metal cube's presence",
+      "S2": "The cyan metal sphere's presence"
+    },
+    "edges": [
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Y=1, S1=1, S2=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1, S1=1, S2=1",
+      "do(X2=0)": "X1=1, Y=1, S1=1, S2=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "overdetermination",
+    "setting": "add_two_static",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

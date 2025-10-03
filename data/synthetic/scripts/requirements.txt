@@ -1,0 +1,26 @@
+# Core Physics Simulation
+pybullet==3.2.7
+numpy==2.2.6
+
+# Video Processing and Generation
+opencv-python-headless==4.12.0.88
+moviepy==1.0.3
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+
+# Progress Bars and UI
+tqdm==4.67.1
+
+# Data Processing and Utilities
+scipy==1.16.1
+pillow==11.3.0
+matplotlib==3.10.3
+
+# System Utilities
+psutil==7.0.0
+
+# Configuration and Data Formats
+PyYAML==6.0.2
+
+# Optional: Enhanced CLI and Progress Display
+rich==14.1.0

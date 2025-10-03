@@ -1,0 +1,182 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "overdetermination",
+    "setting": "add_one_moving",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the blue metal cylinder's motion toward the purple rubber cylinder affect the purple rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the green metal cylinder's motion toward the purple rubber cylinder affect the purple rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the purple rubber cylinder move?",
+      "answer": [
+        0,
+        3
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the green metal cylinder moved toward the purple rubber cylinder.",
+        "Because the purple rubber cylinder moved spontaneously.",
+        "Because the blue metal cylinder and the green metal cylinder moved toward the purple rubber cylinder.",
+        "Because the blue metal cylinder moved toward the purple rubber cylinder.",
+        "Because the brown metal cube was present."
+      ]
+    },
+    {
+      "question": "If we force the blue metal cylinder not to move toward the purple rubber cylinder, will the green metal cylinder cause the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the green metal cylinder not to move toward the purple rubber cylinder, will the blue metal cylinder cause the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the blue metal cylinder had not moved toward the purple rubber cylinder, would the purple rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green metal cylinder had not moved toward the purple rubber cylinder, would the purple rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the purple rubber cylinder sufficient for the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the purple rubber cylinder sufficient for the purple rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the purple rubber cylinder necessary for the purple rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the purple rubber cylinder necessary for the purple rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the purple rubber cylinder moving?",
+      "answer": {
+        "HP": [
+          1,
+          2,
+          4
+        ],
+        "BV": [
+          2,
+          4
+        ],
+        "DBV": [
+          2,
+          4
+        ],
+        "Boc": [
+          2,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The brown metal cube is present.",
+        "The blue metal cylinder and the green metal cylinder move toward the purple rubber cylinder.",
+        "The blue metal cylinder moves toward the purple rubber cylinder.",
+        "None.",
+        "The green metal cylinder moves toward the purple rubber cylinder."
+      ]
+    },
+    {
+      "question": "Was the fact that the blue metal cylinder moved toward the purple rubber cylinder responsible for the purple rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green metal cylinder moved toward the purple rubber cylinder responsible for the purple rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The blue metal cylinder's motion toward the purple rubber cylinder",
+      "X2": "The green metal cylinder's motion toward the purple rubber cylinder",
+      "Y": "The purple rubber cylinder's motion",
+      "M": "The brown metal cube's presence"
+    },
+    "edges": [
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Y=1, M=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1, M=1",
+      "do(X2=0)": "X1=1, Y=1, M=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "overdetermination",
+    "setting": "add_one_moving",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

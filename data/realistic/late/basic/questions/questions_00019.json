@@ -1,0 +1,152 @@
+{
+  "video_info": {
+    "scene_index": 19,
+    "video_filename": "video_00019.mp4",
+    "scenario": "late",
+    "total_frames": 268,
+    "duration": 9.553190104166667
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 7 seconds in the clip, does the oncoming white car's collision with the white car in front of me affect whether the oncoming white car becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, does the oncoming white car's collision with my car affect whether the oncoming white car becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, why did the oncoming white car become damaged?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the oncoming white car became damaged spontaneously.",
+        "Because the oncoming white car moved toward my car.",
+        "Because the oncoming white car moved toward the white car in front of me."
+      ]
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, if the oncoming white car is forced not to collide with the white car in front of me, will my car cause the it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, if the oncoming white car is forced not to collide with my car, will the white car in front of me cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, if the oncoming white car had not collided with the white car in front of me, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, if the oncoming white car had not collided with my car, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with the white car in front of me sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with my car sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with the white car in front of me necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with my car necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, what is the actual cause of the oncoming white car becoming damaged?",
+      "answer": {
+        "HP": [
+          1
+        ],
+        "BV": [
+          1
+        ],
+        "DBV": [
+          1
+        ],
+        "Boc": [
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The oncoming white car collides with my car.",
+        "The oncoming white car collides with the white car in front of me.",
+        "None."
+      ]
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with the white car in front of me responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 7 seconds in the clip, was the oncoming white car's collision with my car responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 14,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

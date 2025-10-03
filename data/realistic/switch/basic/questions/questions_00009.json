@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 9,
+    "video_filename": "video_00009.mp4",
+    "scenario": "switch",
+    "total_frames": 206,
+    "duration": 6.905143229166667
+  },
+  "qa_pairs": [
+    {
+      "question": "From 3 to 6 seconds in the clip, does my car staying straight affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, does my car making a turn affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, does my car's choice of staying straight or making a turn affect whether it becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, why did my car become damaged?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it stayed straight.",
+        "Because it did not make a turn.",
+        "Because it became damaged spontaneously.",
+        "Because of its choice of staying straight or making a turn."
+      ]
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if my car is forced not to stay straight, will the white car in front of me cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if my car is forced to make a turn, will the white car in front of me cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if my car had not stayed straight, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if my car had made a turn, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that my car stayed straight sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was my car's choice of staying straight or making a turn sufficient for it to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that my car stayed straight necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was my car's choice of staying straight or making a turn necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, what is the actual cause of my car becoming damaged?",
+      "answer": {
+        "HP": [
+          0,
+          3
+        ],
+        "BV": [
+          3
+        ],
+        "DBV": [
+          3
+        ],
+        "Boc": [
+          0,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The choice of staying straight or making a turn.",
+        "None.",
+        "It makes a turn.",
+        "It stays straight."
+      ]
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that my car stayed straight responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was my car's choice of staying straight or making a turn responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

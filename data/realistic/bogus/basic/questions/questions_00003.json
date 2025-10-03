@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 3,
+    "video_filename": "video_00003.mp4",
+    "scenario": "bogus",
+    "total_frames": 540,
+    "duration": 9.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does 76ers No. 43's (in blue) attempt to defend the HEAT player (in white) affect whether HEAT scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the HEAT player's (in white) shot attempt affect whether HEAT scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does the HEAT player's (in white) shot on target affect whether HEAT scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did HEAT (the white team) fail to score on this possession?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because nothing in the play caused HEAT to score.",
+        "Because the HEAT player's shot was not on target.",
+        "Because 76ers No. 43 attempted to defend the HEAT player.",
+        "Because the HEAT player did not shoot against 76ers."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force 76ers No. 43 (in blue) not to defend the HEAT player (in white) and force the HEAT player to shoot, will the HEAT player's shot on target cause HEAT to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force 76ers No. 43 (in blue) not to defend the HEAT player (in white) and force the HEAT player to shoot, will 76ers cause HEAT to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force the HEAT player (in white) to shoot, will its shot on target cause HEAT to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if 76ers No. 43 (in blue) had not attempted to defend the HEAT player (in white) and the HEAT player had shot, would HEAT still have failed to score on this possession?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if the HEAT player (in white) had shot, would HEAT still have failed to score on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that 76ers No. 43 (in blue) attempted to defend the HEAT player (in white) sufficient for HEAT's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player (in white) did not shoot sufficient for HEAT's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player's (in white) shot was not on target sufficient for HEAT's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that 76ers No. 43 (in blue) attempted to defend the HEAT player (in white) necessary for HEAT's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player (in white) did not shoot necessary for HEAT's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player's (in white) shot was not on target necessary for HEAT's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of HEAT's (the white team) failure to score on this possession?",
+      "answer": {
+        "HP": [
+          0,
+          4
+        ],
+        "BV": [
+          0,
+          2
+        ],
+        "DBV": [
+          0,
+          2
+        ],
+        "Boc": [
+          0,
+          1,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The HEAT player's shot is not on target.",
+        "76ers No. 43 attempts to defend the HEAT player.",
+        "The HEAT player does not shoot against 76ers.",
+        "None.",
+        "76ers No. 43 attempts to defend the HEAT player and the HEAT player does not shoot against 76ers"
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that 76ers No. 43 (in blue) attempted to defend the HEAT player (in white) responsible for HEAT's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player (in white) did not shoot responsible for HEAT's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that the HEAT player's (in white) shot was not on target responsible for HEAT's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "video_info": {
+    "scene_index": 3,
+    "video_filename": "video_00003.mp4",
+    "scenario": "late",
+    "total_frames": 764,
+    "duration": 12.733333333333333
+  },
+  "qa_pairs": [
+    {
+      "question": "From 7 to 9 seconds in the clip, does UTAH No. 3's (in blue) shot affect whether UTAH scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, does UTAH No. 27's (in blue) shot affect whether UTAH scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, does UTAH No. 3's (in blue) shot affect UTAH No. 27's shot?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, why did UTAH (the blue team) score on this possession?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because UTAH No. 3 attempted to take a shot.",
+        "Because UTAH No. 27 attempted to take a shot.",
+        "Because UTAH caused UTAH to score."
+      ]
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, if UTAH No. 3 (in blue) is forced not to take a shot, will UTAH No. 27 (in blue) cause UTAH to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, if UTAH No. 27 (in blue) is forced not to take a shot, will UTAH No. 3 (in blue) cause UTAH to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, if UTAH No. 3 had not attempted to take a shot, would UTAH still have scored on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, if UTAH No. 27 had not attempted to take a shot, would UTAH still have scored on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 3's shot attempt sufficient for UTAH to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 27's shot attempt sufficient for UTAH to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 3's shot attempt necessary for UTAH to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 27's shot attempt necessary for UTAH to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, what is the actual cause of UTAH scoring on this possession?",
+      "answer": {
+        "HP": [
+          0,
+          1
+        ],
+        "BV": [
+          0,
+          1
+        ],
+        "DBV": [
+          0,
+          1
+        ],
+        "Boc": [
+          0,
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "UTAH No. 3 takes a shot.",
+        "UTAH No. 3 attempts to take a shot.",
+        "None.",
+        "UTAH No. 27 attempts to take a shot.",
+        "UTAH No. 27 takes a shot."
+      ]
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 3's shot attempt responsible for UTAH scoring on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 7 to 9 seconds in the clip, was UTAH No. 27's shot attempt responsible for UTAH scoring on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

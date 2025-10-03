@@ -1,0 +1,165 @@
+{
+  "video_info": {
+    "scene_index": 1,
+    "video_filename": "video_00001.mp4",
+    "scenario": "late",
+    "total_frames": 384,
+    "duration": 12.8
+  },
+  "qa_pairs": [
+    {
+      "question": "From 5 to 7 seconds in the clip, does the white car's collision with the black car affect whether the black car becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, does the electric scooter's collision with the black car affect whether the black car becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, does the white car's collision with the black car affect the electric scooter's collision with the white car?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, why did the black car become damaged?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the electric scooter moved toward the black car.",
+        "Because the black car became damaged spontaneously.",
+        "Because the white car moved toward the black car."
+      ]
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if the white car is forced not to move toward the black car, will the electric scooter cause the black car to become damaged?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if the electric scooter is forced not to move toward the black car, will the white car cause the black car to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if the white car had not moved toward the black car, would the black car still have become damaged?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, if the electric scooter had not moved toward the black car, would the black car still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the white car moved toward the black car sufficient for the black car to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the electric scooter moved toward the black car sufficient for the black car to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the white car moved toward the black car necessary for the black car to become damaged?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the electric scooter moved toward the black car necessary for the black car to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, what is the actual cause of the black car becoming damaged?",
+      "answer": {
+        "HP": [
+          0,
+          1
+        ],
+        "BV": [
+          0,
+          1
+        ],
+        "DBV": [
+          0,
+          1
+        ],
+        "Boc": [
+          0,
+          1
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The white car collides with the black car.",
+        "The white car moves toward the black car.",
+        "The electric scooter moves toward the black car.",
+        "The electric scooter collides with the black car.",
+        "None."
+      ]
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the white car moved toward the black car responsible for the black car becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 5 to 7 seconds in the clip, was the fact that the electric scooter moved toward the black car responsible for the black car becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

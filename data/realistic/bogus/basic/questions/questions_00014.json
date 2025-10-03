@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 14,
+    "video_filename": "video_000014.mp4",
+    "scenario": "bogus",
+    "total_frames": 540,
+    "duration": 9.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 1 to 3 seconds in the clip, does UTAH No. 17's (in yellow) attempt to defend LAL No. 3 (in blue) affect whether LAL scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, does LAL No. 3's (in blue) shot attempt affect whether LAL scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, does LAL No. 3's (in blue) shot on target affect whether LAL scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, why did LAL (the blue team) fail to score on this possession?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because UTAH No. 17 attempted to defend LAL No. 3.",
+        "Because LAL No. 3's shot was not on target.",
+        "Because nothing in the play caused LAL to score.",
+        "Because LAL No. 3 did not shoot against UTAH."
+      ]
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, if we force UTAH No. 17 (in yellow) not to defend LAL No. 3 (in blue) and force LAL No. 3 to shoot, will LAL No. 3's shot on target cause LAL to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, if we force UTAH No. 17 (in yellow) not to defend LAL No. 3 (in blue) and force LAL No. 3 to shoot, will UTAH cause LAL to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, if we force LAL No. 3 (in blue) to shoot, will its shot on target cause LAL to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, if UTAH No. 17 (in yellow) had not attempted to defend LAL No. 3 (in blue) and LAL No. 3 had shot, would LAL still have failed to score on this possession?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, if LAL No. 3 (in blue) had shot, would LAL still have failed to score on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that UTAH No. 17 (in yellow) attempted to defend LAL No. 3 (in blue) sufficient for LAL's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3 (in blue) did not shoot sufficient for LAL's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3's (in blue) shot was not on target sufficient for LAL's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that UTAH No. 17 (in yellow) attempted to defend LAL No. 3 (in blue) necessary for LAL's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3 (in blue) did not shoot necessary for LAL's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3's (in blue) shot was not on target necessary for LAL's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, what is the actual cause of LAL's (the blue team) failure to score on this possession?",
+      "answer": {
+        "HP": [
+          0,
+          1
+        ],
+        "BV": [
+          0,
+          2
+        ],
+        "DBV": [
+          0,
+          2
+        ],
+        "Boc": [
+          0,
+          2,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "LAL No. 3's shot is not on target.",
+        "UTAH No. 17 attempts to defend LAL No. 3 and LAL No. 3 does not shoot against UTAH",
+        "LAL No. 3 does not shoot against UTAH.",
+        "None.",
+        "UTAH No. 17 attempts to defend LAL No. 3."
+      ]
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that UTAH No. 17 (in yellow) attempted to defend LAL No. 3 (in blue) responsible for LAL's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3 (in blue) did not shoot responsible for LAL's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 1 to 3 seconds in the clip, was the fact that LAL No. 3's (in blue) shot was not on target responsible for LAL's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

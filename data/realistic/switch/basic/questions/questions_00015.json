@@ -1,0 +1,163 @@
+{
+  "video_info": {
+    "scene_index": 15,
+    "video_filename": "video_00015.mp4",
+    "scenario": "switch",
+    "total_frames": 516,
+    "duration": 17.2
+  },
+  "qa_pairs": [
+    {
+      "question": "From 6 to 10 seconds in the clip, does the coach turning right affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, does the coach staying straight affect whether it becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, does the coach's choice of turning right or staying straight affect whether it becomes damaged?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, why did the coach become damaged?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because it turned right.",
+        "Because of its choice of turning right or staying straight.",
+        "Because it did not stay straight.",
+        "Because it became damaged spontaneously."
+      ]
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, if the coach is forced not to turn right, will the black car cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, if the coach is forced to stay straight, will the black car cause it to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, if the coach had not turned right, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, if the coach had stayed straight, would it still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the fact that the coach turned right sufficient for it to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the coach's choice of turning right or staying straight sufficient for it to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the fact that the coach turned right necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the coach's choice of turning right or staying straight necessary for it to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, what is the actual cause of the coach becoming damaged?",
+      "answer": {
+        "HP": [
+          1,
+          2
+        ],
+        "BV": [
+          2
+        ],
+        "DBV": [
+          2
+        ],
+        "Boc": [
+          1,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "It stays straight.",
+        "The choice of turning right or staying straight.",
+        "It turns right.",
+        "None."
+      ]
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the fact that the coach turned right responsible for it becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 10 seconds in the clip, was the coach's choice of turning right or staying straight responsible for it becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

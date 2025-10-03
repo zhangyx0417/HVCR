@@ -1,0 +1,165 @@
+{
+  "video_info": {
+    "scene_index": 18,
+    "video_filename": "video_00018.mp4",
+    "scenario": "late",
+    "total_frames": 1029,
+    "duration": 17.55
+  },
+  "qa_pairs": [
+    {
+      "question": "From 11 to 13 seconds in the clip, does the gray car's collision with the red car affect whether the red car becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, does the white car's collision with the red car affect whether the red car becomes damaged?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, does the gray car's collision with the red car affect the white car's collision with the red car??",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, why did the red car become damaged?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the red car became damaged spontaneously.",
+        "Because the gray car moved toward the red car.",
+        "Because the white car moved toward the red car."
+      ]
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, if the gray car is forced not to move toward the red car, will the white car cause the red car to become damaged?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, if the white car is forced not to move toward the red car, will the gray car cause the red car to become damaged?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, if the gray car had not moved toward the red car, would the red car still have become damaged?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, if the white car had not moved toward the red car, would the red car still have become damaged?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the gray car moved toward the red car sufficient for the red car to become damaged?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the white car moved toward the red car sufficient for the red car to become damaged?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the gray car moved toward the red car necessary for the red car to become damaged?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the white car moved toward the red car necessary for the red car to become damaged?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, what is the actual cause of the red car becoming damaged?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          0,
+          2
+        ],
+        "DBV": [
+          0,
+          2
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The gray car moves toward the red car.",
+        "The white car moves toward the red car.",
+        "The gray car collides with the red car.",
+        "The white car collides with the red car.",
+        "None."
+      ]
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the gray car moved toward the red car responsible for the red car becoming damaged?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 11 to 13 seconds in the clip, was the fact that the white car moved toward the red car responsible for the red car becoming damaged?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "late",
+    "total_questions": 15,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

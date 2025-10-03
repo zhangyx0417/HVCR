@@ -1,0 +1,205 @@
+{
+  "video_info": {
+    "scene_index": 6,
+    "video_filename": "video_00006.mp4",
+    "scenario": "switch",
+    "setting": "basic",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the yellow metal sphere's motion toward the cyan rubber sphere before its collision with the purple rubber sphere affect the cyan rubber sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the purple rubber sphere's collision with the yellow metal sphere affect the cyan rubber sphere's motion?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the yellow metal sphere's motion toward the cyan rubber sphere after its collision with the purple rubber sphere affect the cyan rubber sphere's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the cyan rubber sphere move?",
+      "answer": [
+        3
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the cyan rubber sphere moved spontaneously.",
+        "Because the yellow metal sphere moved toward the cyan rubber sphere before its collision with the purple rubber sphere.",
+        "Because the purple rubber sphere collided with the yellow metal sphere.",
+        "Because the yellow metal sphere moved toward the cyan rubber sphere after its collision with the purple rubber sphere."
+      ]
+    },
+    {
+      "question": "If we force the yellow metal sphere not to move toward the cyan rubber sphere after its collision with the purple rubber sphere, will the yellow metal sphere cause the cyan rubber sphere to move?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the purple rubber sphere not to collide with the yellow metal sphere, will the yellow metal sphere cause the cyan rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the yellow metal sphere had not moved toward the cyan rubber sphere after its collision with the purple rubber sphere, would the cyan rubber sphere still have moved?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the purple rubber sphere had not collided with the yellow metal sphere, would the cyan rubber sphere still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere before its collision with the purple rubber sphere sufficient for the cyan rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere collided with the yellow metal sphere sufficient for the cyan rubber sphere to move?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere after its collision with the purple rubber sphere sufficient for the cyan rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere before its collision with the purple rubber sphere necessary for the cyan rubber sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere collided with the yellow metal sphere necessary for the cyan rubber sphere to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere after its collision with the purple rubber sphere necessary for the cyan rubber sphere to move?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the cyan rubber sphere moving?",
+      "answer": {
+        "HP": [
+          0,
+          3
+        ],
+        "BV": [
+          3
+        ],
+        "DBV": [
+          3
+        ],
+        "Boc": [
+          0,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The purple rubber sphere collides with the yellow metal sphere.",
+        "None.",
+        "The yellow metal sphere moves toward the cyan rubber sphere before its collision with the purple rubber sphere.",
+        "The yellow metal sphere moves toward the cyan rubber sphere after its collision with the purple rubber sphere."
+      ]
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere before its collision with the purple rubber sphere responsible for the cyan rubber sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere collided with the yellow metal sphere responsible for the cyan rubber sphere moving?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the yellow metal sphere moved toward the cyan rubber sphere after its collision with the purple rubber sphere responsible for the cyan rubber sphere moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "Z": "The purple rubber sphere's collision with the yellow metal sphere",
+      "X1": "The yellow metal sphere's motion toward the cyan rubber sphere with colliding with the purple rubber sphere",
+      "X2": "The yellow metal sphere's motion toward the cyan rubber sphere without colliding with the purple rubber sphere",
+      "Y": "The cyan rubber sphere's motion"
+    },
+    "edges": [
+      "Z -> X1",
+      "Z -> X2",
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "Z=1, X1=1, X2=0, Y=1",
+    "counterfactual_world": {
+      "do(Z=0)": "X1=0, X2=1, Y=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "switch",
+    "setting": "basic",
+    "total_questions": 18,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

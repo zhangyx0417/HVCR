@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 4,
+    "video_filename": "video_00004.mp4",
+    "scenario": "bogus",
+    "total_frames": 541,
+    "duration": 9.016666666666667
+  },
+  "qa_pairs": [
+    {
+      "question": "From 3 to 6 seconds in the clip, does HEAT No. 11's (in white) attempt to contain 76ers No. 14's (in blue) penetration affect whether 76ers scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, does 76ers No. 14's (in blue) penetration attempt affect whether 76ers scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, does 76ers No. 14's (in blue) penetration into the paint affect whether 76ers scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, why did 76ers (the blue team) fail to score on this possession?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because nothing in the play caused 76ers to score.",
+        "Because 76ers No. 14 did not penetrate against HEAT.",
+        "Because 76ers No. 14 did not get into the paint.",
+        "Because HEAT No. 11 attempted to contain 76ers No. 14's penetration."
+      ]
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if we force HEAT No. 11 (in white) not to contain 76ers No. 14's (in blue) penetration and force 76ers No. 14 to penetrate, will 76ers No. 14's penetration into the paint cause 76ers to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if we force HEAT No. 11 (in white) not to contain 76ers No. 14's (in blue) penetration and force 76ers No. 14 to penetrate, will HEAT cause 76ers to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if we force 76ers No. 14 (in blue) to penetrate, will its penetration into the paint cause 76ers to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if HEAT No. 11 (in white) had not attempted to contain 76ers No. 14's (in blue) penetration and 76ers No. 14 had penetrated, would 76ers still have failed to score on this possession?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, if 76ers No. 14 (in blue) had penetrated, would 76ers still have failed to score on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that HEAT No. 11 (in white) attempted to contain 76ers No. 14's (in blue) penetration sufficient for 76ers's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not penetrate sufficient for 76ers's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not get into the paint sufficient for 76ers's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that HEAT No. 11 (in white) attempted to contain 76ers No. 14's (in blue) penetration necessary for 76ers's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not penetrate necessary for 76ers's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not get into the paint necessary for 76ers's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, what is the actual cause of 76ers's (the blue team) failure to score on this possession?",
+      "answer": {
+        "HP": [
+          0,
+          3
+        ],
+        "BV": [
+          0,
+          4
+        ],
+        "DBV": [
+          0,
+          4
+        ],
+        "Boc": [
+          0,
+          1,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "76ers No. 14 does not get into the paint.",
+        "HEAT No. 11 attempts to contain 76ers No. 14's penetration.",
+        "None.",
+        "HEAT No. 11 attempts to contain 76ers No. 14's penetration and 76ers No. 14 does not penetrate against HEAT",
+        "76ers No. 14 does not penetrate against HEAT."
+      ]
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that HEAT No. 11 (in white) attempted to contain 76ers No. 14's (in blue) penetration responsible for 76ers's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not penetrate responsible for 76ers's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 3 to 6 seconds in the clip, was the fact that 76ers No. 14 (in blue) did not get into the paint responsible for 76ers's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

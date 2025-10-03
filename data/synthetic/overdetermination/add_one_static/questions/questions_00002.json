@@ -1,0 +1,182 @@
+{
+  "video_info": {
+    "scene_index": 2,
+    "video_filename": "video_00002.mp4",
+    "scenario": "overdetermination",
+    "setting": "add_one_static",
+    "total_frames": 125
+  },
+  "qa_pairs": [
+    {
+      "question": "Does the green rubber cylinder's motion toward the yellow rubber cylinder affect the yellow rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Does the purple rubber sphere's motion toward the yellow rubber cylinder affect the yellow rubber cylinder's motion?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Why did the yellow rubber cylinder move?",
+      "answer": [
+        0,
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because the green rubber cylinder moved toward the yellow rubber cylinder.",
+        "Because the purple rubber sphere moved toward the yellow rubber cylinder.",
+        "Because the yellow rubber cube was present.",
+        "Because the green rubber cylinder and the purple rubber sphere moved toward the yellow rubber cylinder.",
+        "Because the yellow rubber cylinder moved spontaneously."
+      ]
+    },
+    {
+      "question": "If we force the green rubber cylinder not to move toward the yellow rubber cylinder, will the purple rubber sphere cause the yellow rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If we force the purple rubber sphere not to move toward the yellow rubber cylinder, will the green rubber cylinder cause the yellow rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the green rubber cylinder had not moved toward the yellow rubber cylinder, would the yellow rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "If the purple rubber sphere had not moved toward the yellow rubber cylinder, would the yellow rubber cylinder still have moved?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green rubber cylinder moved toward the yellow rubber cylinder sufficient for the yellow rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere moved toward the yellow rubber cylinder sufficient for the yellow rubber cylinder to move?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the green rubber cylinder moved toward the yellow rubber cylinder necessary for the yellow rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere moved toward the yellow rubber cylinder necessary for the yellow rubber cylinder to move?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "What is the actual cause of the yellow rubber cylinder moving?",
+      "answer": {
+        "HP": [
+          0,
+          2,
+          4
+        ],
+        "BV": [
+          0,
+          2
+        ],
+        "DBV": [
+          0,
+          2
+        ],
+        "Boc": [
+          0,
+          2
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "The green rubber cylinder moves toward the yellow rubber cylinder.",
+        "The yellow rubber cube is present.",
+        "The purple rubber sphere moves toward the yellow rubber cylinder.",
+        "None.",
+        "The green rubber cylinder and the purple rubber sphere move toward the yellow rubber cylinder."
+      ]
+    },
+    {
+      "question": "Was the fact that the green rubber cylinder moved toward the yellow rubber cylinder responsible for the yellow rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "Was the fact that the purple rubber sphere moved toward the yellow rubber cylinder responsible for the yellow rubber cylinder moving?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "causal_graph": {
+    "variables": {
+      "X1": "The green rubber cylinder's motion toward the yellow rubber cylinder",
+      "X2": "The purple rubber sphere's motion toward the yellow rubber cylinder",
+      "Y": "The yellow rubber cylinder's motion",
+      "S": "The yellow rubber cube's presence"
+    },
+    "edges": [
+      "X1 -> Y",
+      "X2 -> Y"
+    ]
+  },
+  "twin_network": {
+    "factual_world": "X1=1, X2=1, Y=1, S=1",
+    "counterfactual_world": {
+      "do(X1=0)": "X2=1, Y=1, S=1",
+      "do(X2=0)": "X1=1, Y=1, S=1"
+    }
+  },
+  "generation_metadata": {
+    "scenario": "overdetermination",
+    "setting": "add_one_static",
+    "total_questions": 14,
+    "question_types": [
+      "causality_identification",
+      "responsibility",
+      "causal_attribution",
+      "actual_cause",
+      "individual_causal_effect",
+      "necessary_cause",
+      "sufficient_cause",
+      "counterfactual_reasoning"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

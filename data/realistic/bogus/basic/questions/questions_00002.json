@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 2,
+    "video_filename": "video_00002.mp4",
+    "scenario": "bogus",
+    "total_frames": 325,
+    "duration": 13.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 6 to 8 seconds in the clip, does RUS No. 18's (right) attempt to block BRA No. 16 (left) affect whether BRA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, does BRA No. 16's (left) attack attempt affect whether BRA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, does BRA No. 16's (left) attack over the net affect whether BRA scores in this rally?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, why did BRA (the left team) fail to score in this rally?",
+      "answer": [
+        2
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because RUS No. 18 attempted to block BRA No. 16.",
+        "Because nothing in the play caused BRA to score.",
+        "Because BRA No. 16 did not attack against RUS.",
+        "Because BRA No. 16's attack did not go over the net."
+      ]
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if we force RUS No. 18 (right) not to block BRA No. 16 (left) and force BRA No. 16 to attack, will BRA No. 16's attack over the net cause BRA to score in this rally?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if we force RUS No. 18 (right) not to block BRA No. 16 (left) and force BRA No. 16 to attack, will RUS No. 18 cause BRA to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if we force BRA No. 16 (left) to attack, will its attack over the net cause BRA to score in this rally?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if RUS No. 18 (right) had not attempted to block BRA No. 16 (left) and BRA No. 16 had attacked, would BRA still have failed to score in this rally?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, if BRA No. 16 (left) had attacked, would BRA still have failed to score in this rally?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that RUS No. 18 (right) attempted to block BRA No. 16 (left) sufficient for BRA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16 (left) did not attack sufficient for BRA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16's (left) attack did not go over the net sufficient for BRA's failure to score in this rally?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that RUS No. 18 (right) attempted to block BRA No. 16 (left) necessary for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16 (left) did not attack necessary for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16's (left) attack did not go over the net necessary for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, what is the actual cause of BRA's (the left team) failure to score in this rally?",
+      "answer": {
+        "HP": [
+          2,
+          3
+        ],
+        "BV": [
+          0,
+          3
+        ],
+        "DBV": [
+          0,
+          3
+        ],
+        "Boc": [
+          0,
+          3,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "BRA No. 16 does not attack against RUS.",
+        "None.",
+        "RUS No. 18 attempts to block BRA No. 16 and BRA No. 16 does not attack against RUS.",
+        "BRA No. 16's attack does not go over the net.",
+        "RUS No. 18 attempts to block BRA No. 16."
+      ]
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that RUS No. 18 (right) attempted to block BRA No. 16 (left) responsible for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16 (left) did not attack responsible for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 6 to 8 seconds in the clip, was the fact that BRA No. 16's (left) attack did not go over the net responsible for BRA's failure to score in this rally?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

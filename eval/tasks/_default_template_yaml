@@ -1,0 +1,30 @@
+task: videoac
+output_type: generate_until
+doc_to_visual: !function utils.videoac_doc_to_visual
+doc_to_text: !function utils.videoac_doc_to_text
+doc_to_target: "answer"
+generation_kwargs:
+  max_new_tokens: 1024
+
+lmms_eval_specific_kwargs:
+  default:
+    pre_prompt: "You are an English language expert at answering Multiple Choice Questions given a video clip.
+                 Follow these steps:
+                 1. Read the Question.
+                 2. Observe the clip.
+                 3. Read the Possible Answers.
+                 4. Choose the best answer(s) (you may select multiple if applicable).
+                 5. Provide your final answer in the required format.
+
+                 Output format (strictly follow):
+                 Answer: A END
+                 Answer: A B C END
+
+                 Select the best option(s) that accurately addresses the following question:\n"
+    post_prompt: "\nAlways include the Answer line.
+                 Always select at least one option.
+                 Always end the answer with the END line terminator.
+                 If there are multiple options, always separate them with whitespace.
+                 Do not output anything beyond the Answer."
+
+process_results: !function utils.videoac_process_results

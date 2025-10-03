@@ -1,0 +1,184 @@
+{
+  "video_info": {
+    "scene_index": 17,
+    "video_filename": "video_00017.mp4",
+    "scenario": "switch",
+    "total_frames": 375,
+    "duration": 15.0
+  },
+  "qa_pairs": [
+    {
+      "question": "From 13 to 15 seconds in the clip, does Japan No. 12's (left) initial attack (before Japan No. 6's follow-up action) affect whether the attack is blocked?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, does Japan No. 6's (left) follow-up action affect whether the attack is blocked?",
+      "answer": "No",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, does Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) affect whether the attack is blocked?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, why was Japan No. 12's (left) blocked?",
+      "answer": [
+        1
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because of Canada.",
+        "Because of Japan No. 12's initial attack (before Japan No. 6's follow-up action).",
+        "Because of Japan No. 6's follow-up action.",
+        "Because of Japan No. 12's affected attack (after Japan No. 6's follow-up action)."
+      ]
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, if Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) is forced not to go over the net, will Japan No. 12 cause the attack to be blocked?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, if Japan No. 6 (left) is forced not to perform the follow-up action, will Japan No. 12 cause the attack to be blocked?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, if Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) had not gone over the net, would the attack still have been blocked?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, if Japan No. 6 (left) had not performed the follow-up action, would the attack still have been blocked?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) initial attack (before Japan No. 6's follow-up action) was on its way over the net sufficient for the attack to be blocked?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was Japan No. 6's (left) follow-up action sufficient for the attack to be blocked?",
+      "answer": "No",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) was on its way over the net sufficient for the attack to be blocked?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) initial attack (before Japan No. 6's follow-up action) was on its way over the net necessary for the attack to be blocked?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was Japan No. 6's (left) follow-up action necessary for the attack to be blocked?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) was on its way over the net necessary for the attack to be blocked?",
+      "answer": "Yes",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, what is the actual cause of Japan (the left team) scoring?",
+      "answer": {
+        "HP": [
+          0,
+          3
+        ],
+        "BV": [
+          3
+        ],
+        "DBV": [
+          3
+        ],
+        "Boc": [
+          0,
+          3
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "Japan No. 12's affected attack (after Japan No. 6's follow-up action).",
+        "Canada.",
+        "Japan No. 6's follow-up action.",
+        "Japan No. 12's initial attack (before Japan No. 6's follow-up action)."
+      ]
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) initial attack (before Japan No. 6's follow-up action) was on its way over the net responsible for the attack being blocked?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was Japan No. 6's (left) follow-up action responsible for the attack being blocked?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 13 to 15 seconds in the clip, was the fact that Japan No. 12's (left) affected attack (after Japan No. 6's follow-up action) was on its way over the net responsible for the attack being blocked?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "switch",
+    "total_questions": 18,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}

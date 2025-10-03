@@ -1,0 +1,195 @@
+{
+  "video_info": {
+    "scene_index": 16,
+    "video_filename": "video_000016.mp4",
+    "scenario": "bogus",
+    "total_frames": 587,
+    "duration": 9.783333333333333
+  },
+  "qa_pairs": [
+    {
+      "question": "From 4 to 6 seconds in the clip, does MAVERICKS No. 5's (in white) attempt to defend JAZZ No. 3 (in blue) affect whether JAZZ scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does JAZZ No. 3's (in blue) shot attempt affect whether JAZZ scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, does JAZZ No. 3's (in blue) shot on target affect whether JAZZ scores on this possession?",
+      "answer": "Yes",
+      "question_type": "causality_identification",
+      "question_rung": "discovery",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, why did JAZZ (the blue team) fail to score on this possession?",
+      "answer": [
+        0
+      ],
+      "question_type": "causal_attribution",
+      "question_rung": "discovery",
+      "answer_type": "multi_choice",
+      "options": [
+        "Because JAZZ No. 3's shot was not on target.",
+        "Because nothing in the play caused JAZZ to score.",
+        "Because MAVERICKS No. 5 attempted to defend JAZZ No. 3.",
+        "Because JAZZ No. 3 did not shoot against MAVERICKS."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force MAVERICKS No. 5 (in white) not to defend JAZZ No. 3 (in blue) and force JAZZ No. 3 to shoot, will JAZZ No. 3's shot on target cause JAZZ to score on this possession?",
+      "answer": "Yes",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force MAVERICKS No. 5 (in white) not to defend JAZZ No. 3 (in blue) and force JAZZ No. 3 to shoot, will MAVERICKS cause JAZZ to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if we force JAZZ No. 3 (in blue) to shoot, will its shot on target cause JAZZ to score on this possession?",
+      "answer": "No",
+      "question_type": "individual_causal_effect",
+      "question_rung": "intervention",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if MAVERICKS No. 5 (in white) had not attempted to defend JAZZ No. 3 (in blue) and JAZZ No. 3 had shot, would JAZZ still have failed to score on this possession?",
+      "answer": "No",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, if JAZZ No. 3 (in blue) had shot, would JAZZ still have failed to score on this possession?",
+      "answer": "Yes",
+      "question_type": "counterfactual_reasoning",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that MAVERICKS No. 5 (in white) attempted to defend JAZZ No. 3 (in blue) sufficient for JAZZ's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3 (in blue) did not shoot sufficient for JAZZ's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3's (in blue) shot was not on target sufficient for JAZZ's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "sufficient_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that MAVERICKS No. 5 (in white) attempted to defend JAZZ No. 3 (in blue) necessary for JAZZ's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3 (in blue) did not shoot necessary for JAZZ's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3's (in blue) shot was not on target necessary for JAZZ's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "necessary_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, what is the actual cause of JAZZ's (the blue team) failure to score on this possession?",
+      "answer": {
+        "HP": [
+          0,
+          2
+        ],
+        "BV": [
+          2,
+          4
+        ],
+        "DBV": [
+          2,
+          4
+        ],
+        "Boc": [
+          2,
+          3,
+          4
+        ]
+      },
+      "question_type": "actual_cause",
+      "question_rung": "counterfactual",
+      "answer_type": "multi_choice",
+      "options": [
+        "MAVERICKS No. 5 attempts to defend JAZZ No. 3 and JAZZ No. 3 does not shoot against MAVERICKS",
+        "None.",
+        "JAZZ No. 3's shot is not on target.",
+        "MAVERICKS No. 5 attempts to defend JAZZ No. 3.",
+        "JAZZ No. 3 does not shoot against MAVERICKS."
+      ]
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that MAVERICKS No. 5 (in white) attempted to defend JAZZ No. 3 (in blue) responsible for JAZZ's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3 (in blue) did not shoot responsible for JAZZ's failure to score on this possession?",
+      "answer": "Yes",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    },
+    {
+      "question": "From 4 to 6 seconds in the clip, was the fact that JAZZ No. 3's (in blue) shot was not on target responsible for JAZZ's failure to score on this possession?",
+      "answer": "No",
+      "question_type": "responsibility",
+      "question_rung": "counterfactual",
+      "answer_type": "yes_no"
+    }
+  ],
+  "generation_metadata": {
+    "scenario": "bogus",
+    "total_questions": 19,
+    "question_types": [
+      "actual_cause",
+      "necessary_cause",
+      "causal_attribution",
+      "sufficient_cause",
+      "counterfactual_reasoning",
+      "causality_identification",
+      "responsibility",
+      "individual_causal_effect"
+    ],
+    "answer_types": [
+      "multi_choice",
+      "yes_no"
+    ]
+  }
+}
